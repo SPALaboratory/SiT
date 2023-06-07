@@ -80,7 +80,7 @@
             <br>
               <a href="mailto:junhlee@spa.hanyang.ac.kr">Junho Lee</a>,
             
-              <a href="mailto:jschoi@spa.hanyang.ac.kr">Jeongseon Choi</a>,
+              <a href="mailto:jschoi@spa.hanyang.ac.kr">Jungsun Choi</a>,
            
               <a href="mailto:chkim@spa.hanyang.ac.kr">Chanhyeok Kim</a>,
            
@@ -196,87 +196,93 @@
 
 
 <section class="section">
-  <div class="columns is-centered" style="display: flex; align-items: center;">
+  <div class="container is-max-desktop">
 
-    <!-- Outdoor Scene. -->
-    <div class="column" style="display: flex; flex-direction: column; justify-content: center;">
-      <div class="content">
-        <h2 class="title is-3">Outdoor Scene</h2>
-        <p>
-          <!-- We manipulated mobile robot in highly crowded places, including --- -->
-        </p>
-        <img src="./static/images/cafestreet.jpg" style="height: 300px; width: auto;"/>
+    <div class="columns is-centered">
+
+      <!-- Outdoor Scene. -->
+      <div class="column">
+          <h2 class="title is-3">Outdoor Scene</h2>
+          <p>
+            <!-- We manuplated mobile robot in higly crowded places, including --- -->
+          </p>
+          <img src="./static/images/cafestreet.jpg"/>
       </div>
-    </div>
-  
-    <!-- Indoor Scene. -->
-    <div class="column" style="display: flex; flex-direction: column; justify-content: center;">
-      <div class="content">
+
+      <!-- Indoor Scene. -->
+      <div class="column">
         <h2 class="title is-3">Indoor Scene</h2>
-        <p>
-          <!-- samples that fall outside of a bounding box during rendering. -->
-        </p>
-        <img src="./static/images/hall.png" style="height: 300px; width: auto;"/>
+          <p>
+            <!-- samples that fall outside of a bounding box during rendering. -->
+          </p>
+          <img src="./static/images/hall.png"/>
+      </div>
+    
+    </div>
+    <!--/ Matting. -->
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <br>
       </div>
     </div>
-  </div>
-  <br>
-</section>
 
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Sensor Setup</h2>
 
-  <!--/ Matting. -->
-
-<section class="section">
-  <!-- Animation. -->
-  <div class="columns is-centered">
-    <div class="column is-full-width">
-      <h2 class="title is-3">Sensor Setup</h2>
-
-      <!-- Interpolating. -->
-      <h3 class="title is-4">Robot setup</h3>
-      <div class="content has-text-justified">
-        <p>
-          We can also animate the scene by interpolating the deformation latent codes of two input
-          frames. Use the slider here to linearly interpolate between the left frame and the right
-          frame.
-        </p>
-      </div>
-      <section class="huskybot_setup">
-        <div class="container is-max-desktop">
-          <img src="./static/images/230606_husky.png"
-                class="robot-image"
-                alt="Husky UGV platform."/>
+        <!-- Interpolating. -->
+        <h3 class="title is-4">Robot setup</h3>
+        <div class="content has-text-justified">
+          <p>
+            We can also animate the scene by interpolating the deformation latent codes of two input
+            frames. Use the slider here to linearly interpolate between the left frame and the right
+            frame.
+          </p>
         </div>
-      </section>
-      <!-- <div class="columns is-vcentered interpolation-panel">
-        <div class="column is-3 has-text-centered">
-          <img src="./static/images/interpolate_start.jpg"
-                class="interpolation-image"
-                alt="Interpolate start reference image."/>
-          <p>Start Frame</p>
-        </div>
-        <div class="column interpolation-video-column">
-          <div id="interpolation-image-wrapper">
-            Loading...
+        <section class="huskybot_setup">
+          <div class="container is-max-desktop">
+            <img src="./static/images/230606_husky.png"
+                  class="robot-image"
+                  alt="Husky UGV platform."/>
           </div>
-          <input class="slider is-fullwidth is-large is-info"
-                  id="interpolation-slider"
-                  step="1" min="0" max="100" value="0" type="range">
-        </div>
-        <div class="column is-3 has-text-centered">
-          <img src="./static/images/interpolate_end.jpg"
-                class="interpolation-image"
-                alt="Interpolation end reference image."/>
-          <p class="is-bold">End Frame</p>
-        </div>
-      </div> -->
-      <br/>
-      <!--/ Interpolating. -->
+        </section>
+        <!-- <div class="columns is-vcentered interpolation-panel">
+          <div class="column is-3 has-text-centered">
+            <img src="./static/images/interpolate_start.jpg"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+            <p>Start Frame</p>
+          </div>
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider"
+                   step="1" min="0" max="100" value="0" type="range">
+          </div>
+          <div class="column is-3 has-text-centered">
+            <img src="./static/images/interpolate_end.jpg"
+                 class="interpolation-image"
+                 alt="Interpolation end reference image."/>
+            <p class="is-bold">End Frame</p>
+          </div>
+        </div> -->
+        <br/>
+        <!--/ Interpolating. -->
 
+       
+
+      </div>
     </div>
-  </div>
-  <!--/ Animation. -->
+    <!--/ Animation. -->
 
+
+    
+
+  </div>
 </section>
 
 
