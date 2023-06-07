@@ -68,36 +68,32 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-2 publication-title">SiT Dataset: Socially Interactive Pedestrian Trajectory Dataset for Social Navigation Robots</h1>
-          <div class="is-size-6 publication-authors">
-            <span class="author-block">
+          <div class="is-size-6 publication-authors" >
+            <span class="author-block" style="font-size: 20px;">
               <a href="mailto:jwbae@spa.hanyang.ac.kr">Jongwook Bae</a><sup>*</sup>, 
-            <span class="author-block">
+            
               <a href="mailto:jhkim@spa.hanyang.ac.kr">Jungho Kim</a><sup>*</sup>, 
-            <span class="author-block">
+            
               <a href="mailto:jyyun@spa.hanyang.ac.kr">Junyong Yun</a><sup>*</sup>, 
-            </span>
-            <span class="author-block">
+            
               <a href="mailto:changwonkang@spa.hanyang.ac.kr">Changwon Kang</a><sup>*</sup>, 
-            </span>
-            <span class="author-block">
+            <br>
               <a href="mailto:junhlee@spa.hanyang.ac.kr">Junho Lee</a>,
-            </span>
-            <span class="author-block">
-              <a href="mailto:jschoi@spa.hanyang.ac.kr">Jungsun Choi</a>,
-            </span>
-            <span class="author-block">
+            
+              <a href="mailto:jschoi@spa.hanyang.ac.kr">Jeongseon Choi</a>,
+           
               <a href="mailto:chkim@spa.hanyang.ac.kr">Chanhyeok Kim</a>,
-            </span>
-            <span class="author-block">
+           
               <a href="https://jchoi-hyu.github.io/">Jungwook Choi</a>,
-            </span>
-            <span class="author-block">
+           
               <a href="https://www.spa.hanyang.ac.kr/faculty">Jun Won Choi</a><sup>†</sup>
-            </span>
           </div>
 
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"></span>Hanyang University</span>
+          <!-- 여백용 -->
+          <span class="author-block" style="font-size: 0px;"> </span> 
+
+          <div class="is-size-5 publication-authors" >
+            <span class="author-block" style="font-size: 23px;" > Hanyang University</span>
             <!-- <span class="author-block"><sup>2</sup>Google Research</span> -->
           </div>
 
@@ -200,93 +196,87 @@
 
 
 <section class="section">
-  <div class="container is-max-desktop">
+  <div class="columns is-centered" style="display: flex; align-items: center;">
 
-    <div class="columns is-centered">
-
-      <!-- Outdoor Scene. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Outdoor Scene</h2>
-          <p>
-            <!-- We manuplated mobile robot in higly crowded places, including --- -->
-          </p>
-          <img src="./static/images/outdoor_1.png"/>
-        </div>
+    <!-- Outdoor Scene. -->
+    <div class="column" style="display: flex; flex-direction: column; justify-content: center;">
+      <div class="content">
+        <h2 class="title is-3">Outdoor Scene</h2>
+        <p>
+          <!-- We manipulated mobile robot in highly crowded places, including --- -->
+        </p>
+        <img src="./static/images/cafestreet.jpg" style="height: 300px; width: auto;"/>
       </div>
-
-      <!-- Indoor Scene. -->
-      <div class="column">
+    </div>
+  
+    <!-- Indoor Scene. -->
+    <div class="column" style="display: flex; flex-direction: column; justify-content: center;">
+      <div class="content">
         <h2 class="title is-3">Indoor Scene</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              <!-- samples that fall outside of a bounding box during rendering. -->
-            </p>
-            <img src="./static/images/indoor_1.png"/>
-          </div>
-
-        </div>
+        <p>
+          <!-- samples that fall outside of a bounding box during rendering. -->
+        </p>
+        <img src="./static/images/hall.png" style="height: 300px; width: auto;"/>
       </div>
     </div>
-    <!--/ Matting. -->
-
-    <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Sensor Setup</h2>
-
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Robot setup</h3>
-        <div class="content has-text-justified">
-          <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
-        </div>
-        <section class="huskybot_setup">
-          <div class="container is-max-desktop">
-            <img src="./static/images/230606_husky.png"
-                  class="robot-image"
-                  alt="Husky UGV platform."/>
-          </div>
-        </section>
-        <!-- <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
-        </div> -->
-        <br/>
-        <!--/ Interpolating. -->
-
-       
-
-      </div>
-    </div>
-    <!--/ Animation. -->
-
-
-    
-
   </div>
+  <br>
+</section>
+
+
+  <!--/ Matting. -->
+
+<section class="section">
+  <!-- Animation. -->
+  <div class="columns is-centered">
+    <div class="column is-full-width">
+      <h2 class="title is-3">Sensor Setup</h2>
+
+      <!-- Interpolating. -->
+      <h3 class="title is-4">Robot setup</h3>
+      <div class="content has-text-justified">
+        <p>
+          We can also animate the scene by interpolating the deformation latent codes of two input
+          frames. Use the slider here to linearly interpolate between the left frame and the right
+          frame.
+        </p>
+      </div>
+      <section class="huskybot_setup">
+        <div class="container is-max-desktop">
+          <img src="./static/images/230606_husky.png"
+                class="robot-image"
+                alt="Husky UGV platform."/>
+        </div>
+      </section>
+      <!-- <div class="columns is-vcentered interpolation-panel">
+        <div class="column is-3 has-text-centered">
+          <img src="./static/images/interpolate_start.jpg"
+                class="interpolation-image"
+                alt="Interpolate start reference image."/>
+          <p>Start Frame</p>
+        </div>
+        <div class="column interpolation-video-column">
+          <div id="interpolation-image-wrapper">
+            Loading...
+          </div>
+          <input class="slider is-fullwidth is-large is-info"
+                  id="interpolation-slider"
+                  step="1" min="0" max="100" value="0" type="range">
+        </div>
+        <div class="column is-3 has-text-centered">
+          <img src="./static/images/interpolate_end.jpg"
+                class="interpolation-image"
+                alt="Interpolation end reference image."/>
+          <p class="is-bold">End Frame</p>
+        </div>
+      </div> -->
+      <br/>
+      <!--/ Interpolating. -->
+
+    </div>
+  </div>
+  <!--/ Animation. -->
+
 </section>
 
 
@@ -302,15 +292,15 @@
   </div>
 </section> -->
 
-<!-- 
+
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
-      <a class="icon-link"
+      <!-- <a class="icon-link"
          href="./static/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
+        <i class="fas fa-file-pdf"></i> -->
       </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+      <a class="icon-link" href="https://github.com/SPALaboratory/SiT-Dataset" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
     </div>
@@ -318,18 +308,26 @@
       <div class="column is-8">
         <div class="content">
           <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
+
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" style="display: inline-block;">
+              <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
+          </a>
+            
+            <br />This work is licensed under a 
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+              Creative Commons Attribution-ShareAlike 4.0 International License
+
           </p>
+            This means you are free to borrow the source code of this website, we just ask that you link back to this page in the footer. Please remember to remove the analytics code included in the header of the website which you do not want on your website.
           <p>
-    
+            
+            </a>
           </p>
         </div>
       </div>
     </div>
   </div>
-</footer> -->
+</footer>
 
 </body>
 </html>
