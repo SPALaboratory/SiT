@@ -640,9 +640,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="column is-8">
         <div class="content">
           <p>
-            <!-- 라이센스 관련 이미지 및 자료 https://github.com/santisoler/cc-licenses/blob/main/README.md -->
             <a rel="license_logo" href="http://creativecommons.org/licenses/by-sa/4.0/" style="display: inline-block;">
-              <img alt="Creative Commons License" style="border-width:0" src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg" />
+              <img alt="Creative Commons License" style="border-width:0" src="https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg" />
             </a>  
             <br/>This work is licensed under a  
             <a rel="license_link" href="http://creativecommons.org/licenses/by-sa/4.0/"> 
