@@ -7,6 +7,9 @@
   <meta name="keywords" content="Robotics, Dataset, Computervision">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SiT Dataset: Socially Interactive Pedestrian Trajectory Dataset for Social Navigation Robots</title>
+  <link rel="icon" type="image/svg+xml" href="./static/images/logo_spa_hp.png">
+
+
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -25,6 +28,7 @@
   <!-- Google Tag Manager -->
 
   <script>
+
     let modalVisible = false;
   
     function openModal(img) {
@@ -114,7 +118,31 @@
     
     /* X 버튼 스타일 */
     .close {
-      display: none;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      color: #f1f1f1;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .logo-container {
+      display: flex;  /* flexbox를 활성화합니다 */
+      align-items: center;  /* 수직 방향으로 중앙에 배치합니다 */
+      justify-content: center; /* 수평 방향으로 중앙에 배치합니다 */
+      gap: 40px;  /* 이미지 사이의 여백을 10px로 설정합니다 */
+    }
+
+    .logo_han {
+      align-items: flex-start; /* 수직 방향으로 최상단에 배치합니다 */  
+      height: 50px;  /* 이미지의 높이를 고정합니다 */
+      width: auto;  /* 이미지의 비율에 맞게 너비를 자동으로 조정합니다 */
+    }
+    .logo_sap {
+      
+        height: 70px;  /* 이미지의 높이를 고정합니다 */
+        width: auto;  /* 이미지의 비율에 맞게 너비를 자동으로 조정합니다 */
     }
   </style>
   
@@ -150,7 +178,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <!-- 집 모양 네비게이션 바(메뉴)를 만드는 코드 -->
-<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+<nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
       <span aria-hidden="true"></span>
@@ -160,7 +188,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
+      <a class="navbar-item" href="https://www.spa.hanyang.ac.kr">
       <span class="icon">
           <i class="fas fa-home"></i>
       </span>
@@ -168,26 +196,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
-          More Research
+          SPA Laboratory
         </a>
         <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
+          <a class="navbar-item" href="https://www.spa.hanyang.ac.kr/faculty">
+            Faculty
           </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
+          <a class="navbar-item" href="https://www.spa.hanyang.ac.kr/members">
+            Members
           </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
+          <a class="navbar-item" href="https://www.spa.hanyang.ac.kr/research">
+            Research
           </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
+          <a class="navbar-item" href="https://www.spa.hanyang.ac.kr/projects">
+            Projects
+          </a>
+          <a class="navbar-item" href="https://www.spa.hanyang.ac.kr/publications">
+            Publications
+          </a>
+          <a class="navbar-item" href="https://www.spa.hanyang.ac.kr/lectures">
+            Lectures
           </a>
         </div>
       </div>
     </div>
   </div>
-</nav> -->
+</nav>
 
 
 <section class="hero">
@@ -195,7 +229,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">SiT Dataset: Socially Interactive Pedestrian Trajectory Dataset for Social Navigation Robots</h1>
+          <h1 class="title is-1 publication-title" style="font-size: 45px">SiT Dataset: Socially Interactive Pedestrian Trajectory Dataset for Social Navigation Robots</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block" style="font-size: 20px;">
               <a href="mailto:jwbae@spa.hanyang.ac.kr">Jongwook Bae</a><sup>*</sup>, 
@@ -220,8 +254,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <!-- 여백용 -->
           <span class="author-block" style="font-size: 0px;"> </span> 
 
-          <div class="is-size-5 publication-authors" >
-            <span class="author-block" style="font-size: 23px;" > Hanyang University</span>
+          <!-- <div class="is-size-5 publication-authors" >
+            <span class="author-block" style="font-size: 23px;" > Hanyang University <br><br> </span>
+          </div> -->
+          
+          <div class="logo-container">
+            <img class="logo_sap" src="./static/images/logo_spa_fit.png" alt="logo_spa" >
+            <img class="logo_han" src="./static/images/logo_hanyang.png" alt="logo_hanyang" >
+            <br><br><br><br>
           </div>
 
           <div class="column has-text-centered">
@@ -249,15 +289,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </span> -->
 
               <!-- Video Link. -->
-              <!-- <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+              <span class="link-block">
+                <a href="https://youtu.be/C7oP4bLOBbg"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
                   </span>
                   <span>Video</span>
                 </a>
-              </span> -->
+              </span>
 
               <!-- Code Link. -->
               <span class="link-block">
@@ -423,9 +463,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <!--/ Animation. -->
     <div class="columns is-centered"></br></br></br></div>
-    <section class="hero is-light is-small">
-      <div class="hero-body">
-        <h2 class="title is-3">Semetic Map</h2>
+    <h2 class="title is-3">Semetic Map</h2>
+      <section class="hero is-light is-small">
+        <div class="hero-body">
           <div class="container">
             <div id="results-carousel" class="carousel results-carousel">
               <div class="item item-chair-tp">
