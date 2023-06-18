@@ -6,12 +6,8 @@
         content="SiT Dataset: Socially Interactive Pedestrian Trajectory Dataset for Social Navigation Robots">
   <meta name="keywords" content="Robotics, Dataset, Computervision">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <meta property="og:image" content="https://github.com/SPALaboratory/SiT/tree/main/static/images/SiT_thumbnail.png">
-  <meta name="twitter:image" content="https://github.com/SPALaboratory/SiT/tree/main/static/images/SiT_thumbnail.png">
-
   <title>SiT Dataset: Socially Interactive Pedestrian Trajectory Dataset for Social Navigation Robots</title>
-  <link rel="icon" type="image/svg+xml" href="./static/images/logo_sit_fit.png">
+  <link rel="icon" type="image/svg+xml" href="./static/images/logo_spa_hp_fit.png">
 
 
   <!-- Google Tag Manager -->
@@ -224,6 +220,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </a>
           <a class="navbar-item" href="https://www.spa.hanyang.ac.kr/publications">
             Publications
+          </a>
+          <a class="navbar-item" href="https://www.spa.hanyang.ac.kr/lectures">
+            Lectures
           </a>
         </div>
       </div>
@@ -641,9 +640,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="column is-8">
         <div class="content">
           <p>
-            <!-- 라이센스 관련 이미지 및 자료 https://github.com/santisoler/cc-licenses/blob/main/README.md -->
             <a rel="license_logo" href="http://creativecommons.org/licenses/by-sa/4.0/" style="display: inline-block;">
-              <img alt="Creative Commons License" style="border-width:0" src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg" />
+              <img alt="Creative Commons License" style="border-width:0" src="https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg" />
             </a>  
             <br/>This work is licensed under a  
             <a rel="license_link" href="http://creativecommons.org/licenses/by-sa/4.0/"> 
