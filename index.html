@@ -72,6 +72,34 @@
         openModal(img);
       }
     }
+
+    function openModal2(img) {
+      const modal = document.getElementById("myModal2");
+      const modalImg = document.getElementById("modalImage2");
+  
+      modalImg.src = img.src;
+      modal.style.display = "flex";
+      modalVisible = true;
+
+      modalImg.addEventListener("click", closeModal2); // 이미지를 클릭하면 팝업창이 닫히도록 이벤트 추가
+    }
+  
+    function closeModal2() {
+      const modal = document.getElementById("myModal2");
+      modal.style.display = "none";
+      modalVisible = false;
+
+      modalImg.removeEventListener("click", closeModal2); // 팝업창이 닫히면 이미지 클릭 이벤트 제거
+  
+    }
+  
+    function toggleModal2(img) {
+      if (modalVisible) {
+        closeModal2();
+      } else {
+        openModal2(img);
+      }
+    }
   </script>
   
 
@@ -91,7 +119,7 @@
   
     .modal2 {
       display: none;
-      position: fixed;
+      position: relative;
       z-index: 9999;
       top: 0;
       left: 0;
@@ -106,10 +134,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      zoom: 3;  /* 이미지를 확대, 엄청 커도 .model2에서 막힘 */
+      zoom: 3;  /* 이미지를 확대 */
     }
     
     .modal {
+      justify-content: center;
       display: none;
       position: fixed;
       z-index: 9999;
@@ -122,24 +151,42 @@
     }
   
     .modal-content {
-      margin: auto;
+      /* margin: auto;
       display: flex;
+      position: relative;
       justify-content: center;
       align-items: center;
-      max-width: 90%;  /* viewport width의 90%를 넘지 않도록 설정 */
-      max-height: 90%;  /* viewport height의 90%를 넘지 않도록 설정 */
+      max-width: 90%;  
+      max-height: 90%;  */
     }
     
-    /* X 버튼 스타일 */
-    .close {
+    .image-button-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .close2 {
       position: absolute;
       top: 16px;
-      right: 16px;
-      color: #f1f1f1;
-      font-size: 24px;
+      right: 16px;  /* 이미지 내부로 이동 */
+      color: #000000;
+      font-size: 40px;
       font-weight: bold;
       cursor: pointer;
+      z-index: 9999;
     }
+
+    .close {
+      position: absolute;
+      top: 120px;
+      right: 565px;  /* 이미지 내부로 이동 */
+      color: #000000;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 9999;
+    }
+
 
     .logo-container {
       display: flex;  /* flexbox를 활성화합니다 */
@@ -154,7 +201,6 @@
       width: auto;  /* 이미지의 비율에 맞게 너비를 자동으로 조정합니다 */
     }
     .logo_sap {
-      
         height: 70px;  /* 이미지의 높이를 고정합니다 */
         width: auto;  /* 이미지의 비율에 맞게 너비를 자동으로 조정합니다 */
     }
@@ -198,7 +244,7 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://www.spa.hanyang.ac.kr">
+      <a class="navbar-item" href="https://www.spa.hanyang.ac.kr" target="_blank">
       <span class="icon">
           <i class="fas fa-home"></i>
       </span>
@@ -209,19 +255,19 @@
           SPA Laboratory
         </a>
         <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://www.spa.hanyang.ac.kr/faculty">
+          <a class="navbar-item" href="https://www.spa.hanyang.ac.kr/faculty" target="_blank">
             Faculty
           </a>
-          <a class="navbar-item" href="https://www.spa.hanyang.ac.kr/members">
+          <a class="navbar-item" href="https://www.spa.hanyang.ac.kr/members" target="_blank">
             Members
           </a>
-          <a class="navbar-item" href="https://www.spa.hanyang.ac.kr/research">
+          <a class="navbar-item" href="https://www.spa.hanyang.ac.kr/research" target="_blank">
             Research
           </a>
-          <a class="navbar-item" href="https://www.spa.hanyang.ac.kr/projects">
+          <a class="navbar-item" href="https://www.spa.hanyang.ac.kr/projects" target="_blank">
             Projects
           </a>
-          <a class="navbar-item" href="https://www.spa.hanyang.ac.kr/publications">
+          <a class="navbar-item" href="https://www.spa.hanyang.ac.kr/publications" target="_blank">
             Publications
           </a>
         </div>
@@ -239,23 +285,23 @@
           <h1 class="title is-1 publication-title" style="font-size: 45px">SiT Dataset: Socially Interactive Pedestrian Trajectory Dataset for Social Navigation Robots</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block" style="font-size: 20px;">
-              <a href="mailto:jwbae@spa.hanyang.ac.kr">Jongwook Bae</a><sup>*</sup>, 
+              <a href="mailto:jwbae@spa.hanyang.ac.kr" target="_blank">Jongwook Bae</a><sup>*</sup>, 
             
-              <a href="mailto:jhkim@spa.hanyang.ac.kr">Jungho Kim</a><sup>*</sup>, 
+              <a href="mailto:jhkim@spa.hanyang.ac.kr" target="_blank">Jungho Kim</a><sup>*</sup>, 
             
-              <a href="mailto:jyyun@spa.hanyang.ac.kr">Junyong Yun</a><sup>*</sup>, 
+              <a href="mailto:jyyun@spa.hanyang.ac.kr" target="_blank">Junyong Yun</a><sup>*</sup>, 
             
-              <a href="mailto:changwonkang@spa.hanyang.ac.kr">Changwon Kang</a><sup>*</sup>, 
+              <a href="mailto:changwonkang@spa.hanyang.ac.kr" target="_blank">Changwon Kang</a><sup>*</sup>, 
             <br>
-              <a href="mailto:junhlee@spa.hanyang.ac.kr">Junho Lee</a>,
+              <a href="mailto:junhlee@spa.hanyang.ac.kr" target="_blank">Junho Lee</a>,
             
-              <a href="mailto:jschoi@spa.hanyang.ac.kr">Jeongseon Choi</a>,
+              <a href="mailto:jschoi@spa.hanyang.ac.kr" target="_blank">Jeongseon Choi</a>,
            
-              <a href="mailto:chkim@spa.hanyang.ac.kr">Chanhyeok Kim</a>,
+              <a href="mailto:chkim@spa.hanyang.ac.kr" target="_blank">Chanhyeok Kim</a>,
            
-              <a href="https://jchoi-hyu.github.io/">Jungwook Choi</a>,
+              <a href="https://jchoi-hyu.github.io/" target="_blank">Jungwook Choi</a>,
            
-              <a href="https://www.spa.hanyang.ac.kr/faculty">Jun Won Choi</a><sup>†</sup>
+              <a href="https://www.spa.hanyang.ac.kr/faculty" target="_blank">Jun Won Choi</a><sup>†</sup>
           </div>
           
           <!-- 여백용 -->
@@ -294,39 +340,46 @@
               <!-- Video Link. -->
               <span class="link-block">
                 <a href="https://youtu.be/C7oP4bLOBbg"
-                   class="external-link button is-normal is-rounded is-dark">
+                   class="external-link button is-normal is-rounded is-dark"
+                   target="_blank" >
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
                   </span>
-                  <span>Video</span>
+                  <span>Demo Video</span>
                 </a>
               </span>
 
               <!-- Code Link. -->
               <span class="link-block">
                 <a href="https://github.com/SPALaboratory/SiT-Dataset"
-                   class="external-link button is-normal is-rounded is-dark">
+                   class="external-link button is-normal is-rounded is-dark"
+                   target="_blank" >
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code</span>
+                  <span>Devkit</span>
                 </a>
               </span>
               <!-- Dataset Link. -->
               <span class="link-block">
                 <a href="https://drive.google.com/drive/folders/1kYGPJPoWn3J8s0mRWXZv9X-MOR5Hcg8u"
-                   class="external-link button is-normal is-rounded is-dark">
+                   class="external-link button is-normal is-rounded is-dark" 
+                   target="_blank" >
                   <span class="icon">
                       <i class="far fa-images"></i>
                   </span>
-                  <span>Data</span>
+                  <span>Mini Data Set</span>
                 </a>
                 <br><br>
             </div>
             
             <div class="logo-container">
-              <img class="logo_sap" src="./static/images/logo_spa_fit.png" alt="logo_spa" >
-              <img class="logo_han" src="./static/images/logo_hanyang.png" alt="logo_hanyang" >
+              <a href="https://www.spa.hanyang.ac.kr/" target="_blank">
+                <img class="logo_sap" src="./static/images/logo_spa_fit.png" alt="logo_spa">
+              </a>
+              <a href="https://www.hanyang.ac.kr/" target="_blank">
+                <img class="logo_sap" src="./static/images/logo_hanyang.png" alt="logo_hanyang" >
+              </a>
               <br><br><br><br><br><br><br>
             </div>
 
@@ -438,16 +491,36 @@
       </div>
     </div>
     
+    <div id="myModal2" class="modal">
+      <span class="close2" onclick="closeModal2()">&times;</span>
+      <img class="modal-content2" id="modalImage2">
+    </div>
+
+    <div id="myModal" class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img class="modal-content" id="modalImage">
+    </div>
 
     <!-- Animation. -->
     <div class="columns is-centered"></br></br></br></div>
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Robot setup</h2>
+        <h2 class="title is-3">Robot setup</br></h2>
         <!-- Sensor Setup -->
+        
+        <div class="columns is-vcentered interpolation-panel">
+            <img src="./static/images/230607_husky.png"
+                  class="interpolation-image"
+                  alt="Interpolation end reference image." 
+                  onclick="toggleModal2(this)">
+        </div>
+
+        
         <div class="content has-text-justified">
           <p>
-            We remotely operated Clearpath's Husky UGV platform to collect different scenes of robot driving data. The robot has four large wheels that allow it to operate in a variety of environments. As shown in figure, the robot was equipped with the following sensors:
+          </br>We remotely operated Clearpath's Husky UGV platform to collect different scenes of robot driving data.
+          The robot has four large wheels that allow it to operate in a variety of environments. 
+          As shown in figure, the robot was equipped with the following sensors:
             <ul>
               <li>2 x Velodyne VLP-16 rotating 3D LiDARs with 16 channels, 0.09 degree angular resolution, 30 degree vertical field of view, 2 cm distance accuracy, a point cloud rate of approximately 1.3 million points per second, and both operating at 10 Hz.</li>
               <li>5 x Basler a2A1920-51gc PRO GigE cameras capturing images at a high resolution of 1920 x 1200, a field of view of 79 degree (vertical) x 54.3 degree (horizontal), and covering the entire 360-degree area at 10 Hz.</li>
@@ -456,19 +529,6 @@
             </ul>
           </p>
         </div>
-        
-        <div class="columns is-vcentered interpolation-panel">
-            <img src="./static/images/230607_husky.png"
-                  class="interpolation-image"
-                  alt="Interpolation end reference image." 
-                  onclick="toggleModal(this)">
-        </div>
-
-        <div id="myModal" class="modal">
-          <span class="close" onclick="closeModal()">&times;</span>
-          <img class="modal-content2" id="modalImage">
-        </div>
-
         <!--/ Interpolating. -->
 
         <!-- Re-rendering. -->
@@ -565,6 +625,8 @@
             </div>
           </div>
         </div>
+
+      
       </div>
     </div>
 
@@ -572,16 +634,15 @@
     <div class="columns is-centered">
       <div class="content has-text-justified">
         </br>Using scene context information has been proven beneficial in enhancing trajectory prediction models. 
-        To facilitate this, the SiT dataset offers multi-layered semantic maps that encompass a wide range of scene information. The semantic maps are generated through a two-step process. Initially, point cloud maps are constructed, followed by manual segmentation using the <a rel="Nerfies" href="https://github.com/hatem-darweesh/assuremappingtools"> ASSURE mapping</a>. 
-        We prodive multi-layered semantic maps in PNG and Json formats.
+        To facilitate this, the SiT dataset offers multi-layered semantic maps that encompass a wide range of scene information. 
+        The semantic maps are generated through a two-step process. 
+        Initially, point cloud maps are constructed, followed by manual segmentation using the <a rel="Nerfies" href="https://github.com/hatem-darweesh/assuremappingtools" target="_blank"> ASSURE mapping</a>. 
+        We prodive multi-layered semantic maps in <a rel="sementicmap-git" href="https://github.com/SPALaboratory/SiT-Dataset/tree/main/semantic-maps" target="_blank">PNG and Json</a> formats.
       </div>
     </div>
   </div>
 
-  <div id="myModal" class="modal">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <img class="modal-content" id="modalImage">
-  </div>
+ 
 
     
     <!-- Concurrent Work. -->
@@ -635,7 +696,7 @@
          href="./static/videos/nerfies_paper.pdf">
         <i class="fas fa-file-pdf"></i> -->
       </a>
-      <a class="icon-link" href="https://github.com/SPALaboratory/SiT-Dataset" class="external-link" disabled>
+      <a class="icon-link" href="https://github.com/SPALaboratory/SiT-Dataset" class="external-link" disabled target="_blank"> 
         <i class="fab fa-github"></i>
       </a>
     </div>
@@ -644,20 +705,20 @@
         <div class="content">
           <p>
             <!-- 라이센스 관련 이미지 및 자료 https://github.com/santisoler/cc-licenses/blob/main/README.md -->
-            <a rel="license_logo" href="http://creativecommons.org/licenses/by-sa/4.0/" style="display: inline-block;">
+            <a rel="license_logo" href="http://creativecommons.org/licenses/by-sa/4.0/" style="display: inline-block;" target="_blank">
               <img alt="Creative Commons License" style="border-width:0" src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg" />
             </a>  
             <br/>This work is licensed under a  
-            <a rel="license_link" href="http://creativecommons.org/licenses/by-sa/4.0/"> 
+            <a rel="license_link" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"> 
               Creative Commons Attribution-ShareAlike 4.0 International License. </a>
           </p>
 
           <p> This means you are free to borrow the source code of this website, we just ask that you link back to this page in the footer. 
             Please remember to remove the analytics code included in the header of the website which you do not want on your website.</p>
           <p> This webpage template is from 
-            <a rel="Nerfies" href="https://github.com/nerfies/nerfies.github.io"> Nerfies </a>.
+            <a rel="Nerfies" href="https://github.com/nerfies/nerfies.github.io" target="_blank"> Nerfies </a>.
             We sincerely thank 
-            <a rel="Keunhong_Park" href="https://keunhong.com"> Keunhong Park </a>
+            <a rel="Keunhong_Park" href="https://keunhong.com" target="_blank"> Keunhong Park </a>
             for developing and open-sourcing this template.
           </p>
         </div>
