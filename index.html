@@ -195,16 +195,14 @@
       /* gap:  */
     }
     
-    .logo_hanyang {
-      margin-left: 60px; 
-      align-items: flex-start; /* 수직 방향으로 최상단에 배치합니다 */  
-      height: 80px;  /* 이미지의 높이를 고정합니다 */
-      width: auto;  /* 이미지의 비율에 맞게 너비를 자동으로 조정합니다 */
-    }
+    /* .logo_hanyang {
+      align-items: flex-start; 
+      height: 80px;  
+      width: auto; 
+    } */
 
     .logo_sap {
-      margin-left: 40px; 
-      height: 105px;  /* 이미지의 높이를 고정합니다 */
+      height: 110px;  /* 이미지의 높이를 고정합니다 */
       width: auto;  /* 이미지의 비율에 맞게 너비를 자동으로 조정합니다 */
     }
     
@@ -213,6 +211,14 @@
     }
     #teaser {
       transform: scale(1.2);
+    }
+    .is_blue {
+      background-color: #4285F4; /* 예시로 빨간색으로 설정합니다 */
+      /* 다른 스타일 변경도 가능합니다 */
+    }
+    .is-red{
+      background-color: #ff0000; /* 예시로 빨간색으로 설정합니다 */
+      /* 다른 스타일 변경도 가능합니다 */
     }
   </style>
 
@@ -312,14 +318,14 @@
           <span class="author-block" style="font-size: 0px;"> </span> 
 
           <div class="is-size-5 publication-authors" >
-            <span class="author-block" style="font-size: 23px;" > Hanyang University <br><br> </span>
+            <span class="author-block" style="font-size: 23px;" > Hanyang University </span>
           </div>
           
 
 
           <div class="column has-text-centered">
             <div class="publication-links">
-
+              <br><br>
               <!-- PDF Link. -->
               <!-- <span class="link-block">
                 <a href="https://arxiv.org/pdf/2011.12948"
@@ -340,11 +346,10 @@
                   <span>arXiv</span>
                 </a>
               </span> -->
-
-              <!-- Video Link. -->
+<!-- 
               <span class="link-block">
                 <a href="https://youtu.be/lRnoEm6VQCk"
-                   class="external-link button is-normal is-rounded is-dark"
+                   class="external-link button is-normal is-rounded is-blue"
                    target="_blank" >
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -353,7 +358,6 @@
                 </a>
               </span>
 
-              <!-- Dataset Link. -->
               <span class="link-block">
                 <a href="https://drive.google.com/drive/folders/1kYGPJPoWn3J8s0mRWXZv9X-MOR5Hcg8u"
                 class="external-link button is-normal is-rounded is-dark" 
@@ -365,7 +369,6 @@
                   </a>
               </span>
 
-              <!-- Code Link. -->
               <span class="link-block">
                 <a href="https://github.com/SPALaboratory/SiT-Dataset"
                    class="external-link button is-normal is-rounded is-dark"
@@ -376,7 +379,11 @@
                   <span>Devkit</span>
                 </a>
               </span>
-            </div>
+            </div> -->
+
+            <!-- <a href="https://youtu.be/9zc-5Gxjvzk"><img src="https://img.shields.io/badge/Demo_Video-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube Video"/></a>
+            <a href="https://drive.google.com/drive/folders/1kYGPJPoWn3J8s0mRWXZv9X-MOR5Hcg8u"><img src="https://img.shields.io/badge/Data_set-4285F4?style=for-the-badge&logo=google-drive&logoColor=white" alt="Data set"/></a>
+            <a href="https://spalaboratory.github.io/SiT/"><img src="https://img.shields.io/badge/Devkit-181717?style=for-the-badge&logo=github&logoColor=white" alt="Github.io"/></a> -->
 
             <div class="logo-container">
               <div class="column">
@@ -389,9 +396,14 @@
                   <img class="logo_hanyang" src="./static/images/logo_hanyang.png" alt="logo_hanyang" >
                 </a>
               </div> -->
-              <br><br><br><br><br><br><br><br><br>
             </div>
+            
+            <a href="https://youtu.be/9zc-5Gxjvzk"><img src="https://img.shields.io/badge/Demo_Video-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube Video"/></a>
+            <a href="https://drive.google.com/drive/folders/1kYGPJPoWn3J8s0mRWXZv9X-MOR5Hcg8u"><img src="https://img.shields.io/badge/Data_set-4285F4?style=for-the-badge&logo=google-drive&logoColor=white" alt="Data set"/></a>
+            <a href="https://spalaboratory.github.io/SiT/"><img src="https://img.shields.io/badge/Devkit-181717?style=for-the-badge&logo=github&logoColor=white" alt="Github.io"/></a>
 
+
+            <br><br><br>
           </div>
         </div>
       </div>
